@@ -30,12 +30,12 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Database configuration
+# Database configuration for WAMP
 DB_CONFIG = {
-    'host': os.getenv('DB_HOST', 'localhost'),
-    'user': os.getenv('DB_USER', 'root'),
-    'password': os.getenv('DB_PASSWORD', ''),
-    'database': os.getenv('DB_NAME', 'nexuscare_db')
+    'host': 'localhost',
+    'user': 'root',
+    'password': '',  # WAMP default: no password
+    'database': 'nexuscare_db'
 }
 
 def get_db_connection():
